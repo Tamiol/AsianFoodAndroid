@@ -1,6 +1,10 @@
 package com.example.asianfoodandroid;
 
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -38,6 +42,29 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        String[]  recipeList = {"pupa1", "pupa2", "pupa3"};
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_list_item_1, recipeList
+        );
+        ListView listView = findViewById(R.id.listView);
+
+
+        //set the arrayAdapter to the listView
+        listView.setAdapter(adapter);
+
+
+        //ListView click listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, recipeList[position], Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     @Override
