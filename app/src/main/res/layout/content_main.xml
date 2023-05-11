@@ -17,9 +17,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph"/>
-    <ListView
-            android:layout_width="371dp"
-            android:layout_height="212dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/listView"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,26 +43,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[]  recipeList = {"pupa1", "pupa2", "pupa3"};
 
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, recipeList
-        );
-        ListView listView = findViewById(R.id.listView);
-
-
-        //set the arrayAdapter to the listView
-        listView.setAdapter(adapter);
-
-
-        //ListView click listener
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, recipeList[position], Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
     }
