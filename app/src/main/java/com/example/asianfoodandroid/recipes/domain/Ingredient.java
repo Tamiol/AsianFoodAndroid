@@ -2,6 +2,7 @@ package com.example.asianfoodandroid.recipes.domain;
 
 import java.util.Objects;
 
+@Deprecated
 public class Ingredient {
 
     private String name;
